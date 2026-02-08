@@ -41,6 +41,20 @@
 
 <body>
   <h1>🥚恭喜你发现了彩蛋！🥚</h1>
+  
+  <p id="easter" style="margin-top:20px;font-size:18px;color:lightgreen;">
+正在加载彩蛋编号...
+</p>
+
+<script>
+  fetch("https://api.countapi.xyz/hit/page/easteregg")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("easter").innerText =
+        "🎉 你是第 " + data.value + " 个发现这个彩蛋的人！";
+    });
+</script>
+  
   <p>这只是个demo而已，怎么可能会点击跳转游戏呢？🤷‍♀️</p></p>
   <p>这里是王负剑（昵称），取名自《荆轲刺秦》那位大臣的“王负剑！王负剑！”🗡️</p>
   <p>人生信条是“快乐”，人生梦想是和朋友一起做独立游戏🎮；</p>
@@ -51,6 +65,7 @@
 
 </body>
 </html>
+
 
 
 
